@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 const BlogPage = (prop) => {
   const p = useParams();
   console.log(prop.data);
-  const blogPost = prop.data.find((post) => post.id === parseInt(p.id));
+  const blogPost = prop.data.find((post) => post.id === +p.id);
   console.log(blogPost);
   return (
     <div className="max-w-4xl mx-auto py-8">

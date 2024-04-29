@@ -24,9 +24,9 @@ const Navbar = () => {
           <Link to="/" className="text-gray-600 hover:text-black">
             Home
           </Link>
-          <a href="#" className="text-gray-600 hover:text-black">
+          <Link to={"/tour"} className="text-gray-600 hover:text-black">
             Tour Packages
-          </a>
+          </Link>
           <a href="#" className="text-gray-600 hover:text-black">
             Hired a cab
           </a>
@@ -66,14 +66,14 @@ const Navbar = () => {
                 href="#"
                 className="text-gray-300 block py-2 px-4 hover:text-white"
               >
-                Homeee
+                Home
               </a>
-              <a
-                href="#"
+              <Link
+                to={"/tour"}
                 className="text-gray-300 block py-2 px-4 hover:text-white"
               >
                 Tour Packages
-              </a>
+              </Link>
               <a
                 href="#"
                 className="text-gray-300 block py-2 px-4 hover:text-white"
@@ -86,12 +86,12 @@ const Navbar = () => {
               >
                 Hotels
               </a>
-              <a
-                href="#"
+              <Link
+               to={"/blog"}
                 className="text-gray-300 block py-2 px-4 hover:text-white"
               >
                 Blogs
-              </a>
+              </Link>
             </div>
           </div>
         )}

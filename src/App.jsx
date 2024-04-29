@@ -15,7 +15,12 @@ import Blog from "./components/Blog/Blog";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import BlogPage from "./components/Blog/BlogPage";
 import blogData from "./components/Blog/data";
+import Tour from "./components/Tour/Tour";
+import Ptour from "./components/Tour/Ptour";
+import data from "./components/Tour/TourData";
+// import Tourpage from "./components/test/Tourpage";
 function App() {
+  console.log(data[1].types);
   const router = createBrowserRouter([
     {
       path: "/",
@@ -23,6 +28,7 @@ function App() {
         <>
           <Navbar />
           <div className="fake-header h-[15vh] bg-transparent"></div>
+
           <Home />
           <Footer />
         </>
@@ -48,6 +54,69 @@ function App() {
           {/* <Home /> */}
           <BlogPage data={blogData} />
 
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: "/tour",
+      element: (
+        <>
+          <Navbar />
+          <div className="fake-header h-[15vh] bg-transparent"></div>
+          <Tour />
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: `/tour/${data[0].title}/:id`,
+      element: (
+        <>
+          <Navbar />
+          <div className="fake-header h-[15vh] bg-transparent"></div>
+
+          <Ptour data={data[0].types} />
+
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: `/tour/${data[1].title}/:id`,
+
+      element: (
+        <>
+          <Navbar />
+          <div className="fake-header h-[15vh] bg-transparent"></div>
+
+          <Ptour data={data[1].types} />
+
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: `/tour/${data[2].title}/:id`,
+      element: (
+        <>
+          <Navbar />
+          <div className="fake-header h-[15vh] bg-transparent"></div>
+
+          <Ptour data={data[2].types} />
+
+          <Footer />
+        </>
+      ),
+    },
+    {
+      path: `/tour/${data[3].title}/:id`,
+      element: (
+        <>
+          <Navbar />
+          <div className="fake-header h-[15vh] bg-transparent"></div>
+
+          <Ptour data={data[3].types} />
           <Footer />
         </>
       ),
